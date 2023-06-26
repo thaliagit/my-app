@@ -5,7 +5,8 @@ class Welcome extends React.Component {
     return (
       <>
         <p>Welcome, {this.props.name}!</p>
-       {this.props.age > 18 && this.props.age < 65 && this.props.name === "John" && <Age age = {this.props.age}/>}
+       {this.props.age > 18 ? <Age age = {this.props.age}/>
+        : "You are very young!"}
       </>
     );
   }
