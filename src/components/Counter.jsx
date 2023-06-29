@@ -8,7 +8,7 @@ class Counter extends React.Component {
   componentDidMount() {
     setInterval(() => {
       this.setState((prevState) => ({
-        count: prevState.count + this.props.initialIncrement,
+        count: prevState.count + this.props.initialIncrement /2,
       }));
     }, this.props.initialIntervalIncr);
   }
