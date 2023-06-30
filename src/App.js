@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import ClickTracker from './components/ClickTracker';
 
 function App() {
   return (
     <div className="App">
-      starting app
+      <ClickTracker/>
     </div>
   );
 }
