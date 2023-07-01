@@ -1,3 +1,4 @@
+import InteractiveWelcome from "./InteractiveWelcome";
 import { Hello } from "./components/Hello";
 import { Message } from "./components/Message";
 import Welcome from "./components/Welcome";
@@ -7,7 +8,8 @@ function App() {
     <>
       {/* <Hello/>
       <Message/> */}
-      <Welcome name = "Ted"/>
+      {/* <Welcome name = "Ted"/> */}
+      <InteractiveWelcome />
    </>
   );
 }
