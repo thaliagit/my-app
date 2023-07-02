@@ -7,8 +7,7 @@ class Login extends React.Component {
     
       this.state = {
          username : '',
-         password: '',
-         disable: true
+         password: ''
       }
     }
 
@@ -20,13 +19,15 @@ class Login extends React.Component {
       
       this.setState({
         [name] : value
-      }, ()=> this.setState({
-        disable : this.state.username !== "" && this.state.password !== "" ? false : true
-      }))
+      })
     }
    
     btnHandler = () => {
-      this.props.onLogin(this.state)
+      this.setState({
+        username : "",
+        password : ""
+        
+      })
     }
  
 
@@ -38,7 +39,7 @@ class Login extends React.Component {
       <input type="text" name="username" value={this.state.username} onChange={this.handleInput}/>
       <label htmlFor="password">Password</label>
       <input type="password" name="password" value={this.state.password} onChange={this.handleInput}/>
-        <button disabled={this.state.disable} onClick={this.btnHandler}>Login</button>
+        <button onClick={this.btnHandler}>Reset</button>
       </>
     );
   }
