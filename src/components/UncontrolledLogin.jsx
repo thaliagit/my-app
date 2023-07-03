@@ -2,7 +2,15 @@ import React from "react";
 
 class UncontrolledLogin extends React.Component {
  
+  constructor(props) {
+    super(props)
+  
+    this.inputRef = React.createRef()
+  }
 
+  componentDidMount(){
+    this.inputRef.current.focus()
+  }
  
 
   handleFormSubmit = (event) => {
@@ -27,6 +35,7 @@ class UncontrolledLogin extends React.Component {
           <input
             type="text"
             name="username"
+            ref={this.inputRef}
           />
           <label htmlFor="password">Password</label>
           <input
