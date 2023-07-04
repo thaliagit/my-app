@@ -21,7 +21,11 @@ export class TodoList extends Component {
       inpVal: ""
     }));
   };
-
+  removeList = () => {
+    this.setState({
+      newToDo : []
+    })
+  }
 
   render() {
     const toDoItems = this.state.newToDo.map((item, index) => (
@@ -38,6 +42,7 @@ export class TodoList extends Component {
           onChange={this.handleInpChange}
         />
         <button onClick={this.addNewToDo}>Add</button>
+        <button onClick={this.removeList}>Reset List</button>
       </>
     );
   }
