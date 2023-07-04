@@ -26,10 +26,19 @@ export class TodoList extends Component {
       newToDo : []
     })
   }
+  removeListItem = (event) => {
+    const btnIndex = event.target.name;
+    this.setState((prevState) => {
+      const updatedToDo = prevState.newToDo.filter((item, index) => index !== parseInt(btnIndex));
+      return {
+        newToDo: updatedToDo
+      };
+    });
+  };
 
   render() {
     const toDoItems = this.state.newToDo.map((item, index) => (
-      <li key={item + index}>{item}</li>
+      <li key={item + index}>{item}<button onClick={this.removeListItem} name={index}>remove</button></li>
     ));
     return (
       <>
