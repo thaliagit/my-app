@@ -17,7 +17,8 @@ export class TodoList extends Component {
   };
   addNewToDo = () => {
     this.setState((prevState) => ({
-      newToDo: [...prevState.newToDo, prevState.inpVal]
+      newToDo: [...prevState.newToDo, prevState.inpVal],
+      inpVal: ""
     }));
   };
 
