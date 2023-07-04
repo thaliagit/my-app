@@ -5,8 +5,7 @@ export class TodoList extends Component {
     super(props);
     this.state = {
       newToDo: [],
-      inpVal: "",
-      random : false
+      inpVal: ""
     };
   }
 
@@ -17,11 +16,9 @@ export class TodoList extends Component {
     });
   };
   addNewToDo = () => {
-    this.setState({
-        random : true
-    }, () => this.setState((prev) => {
-        prev.newToDo.push(prev.inpVal)
-    }))
+    this.setState((prevState) => ({
+      newToDo: [...prevState.newToDo, prevState.inpVal]
+    }));
   };
 
 
