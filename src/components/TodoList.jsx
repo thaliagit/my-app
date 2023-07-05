@@ -37,12 +37,13 @@ export class TodoList extends Component {
   };
 
   render() {
-    const toDoItems = this.state.newToDo.map((item, index) => (
-      <li key={item + index}>{item}<button onClick={this.removeListItem} name={index}>remove</button></li>
-    ));
+    // const toDoItems = this.state.newToDo.map((item, index) => (
+    //   <li key={item + index}>{item}<button onClick={this.removeListItem} name={index}>remove</button></li>
+    // ));
     return (
       <>
-        <ul>{toDoItems}</ul>
+        {/* <ul>{toDoItems}</ul> */}
+        {this.props.render(this.state.newToDo, this.removeListItem)}
         <label htmlFor="newTodo">Add another To Do : </label>
         <input
           type="text"
