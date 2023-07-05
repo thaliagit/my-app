@@ -18,7 +18,7 @@ class DisplayLanguage extends Component {
             { language => {
                 return (
                     <div>
-                        {Strings[language].current_lang}
+                        <h1>{Strings[language].current_lang}</h1>
                     </div>
                 )
             }}
