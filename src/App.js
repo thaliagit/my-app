@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react';
 import { LanguageContext } from './components/LanguageContext';
 import DisplayLanguage from './components/DisplayLanguage';
+import HookCounter from './components/HookCounter';
 
 class App extends React.Component {
 
@@ -19,13 +20,14 @@ class App extends React.Component {
   render(){
   return (
     <> 
-    <select value={this.state.language} onChange={this.handleLanguageChange}>
+    {/* <select value={this.state.language} onChange={this.handleLanguageChange}>
       <option value="en">English</option>
       <option value="gr">Greek</option>
     </select>
       <LanguageContext.Provider value={this.state.language}>
         <DisplayLanguage />
-      </LanguageContext.Provider>
+      </LanguageContext.Provider> */}
+      <HookCounter />
     </>
   );
   }
