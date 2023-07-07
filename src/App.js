@@ -4,18 +4,19 @@ import React from 'react';
 import { LanguageContext } from './components/LanguageContext';
 import DisplayLanguage from './components/DisplayLanguage';
 import HookCounter from './components/HookCounter';
+import LoginForm from './components/LoginForm';
 
 class App extends React.Component {
 
-  state = {
-    language: "en"
-  }
+  // state = {
+  //   language: "en"
+  // }
 
-  handleLanguageChange = (event) => {
-    this.setState({
-      language: event.target.value
-    })
-  }
+  // handleLanguageChange = (event) => {
+  //   this.setState({
+  //     language: event.target.value
+  //   })
+  // }
   
   render(){
   return (
@@ -27,7 +28,8 @@ class App extends React.Component {
       <LanguageContext.Provider value={this.state.language}>
         <DisplayLanguage />
       </LanguageContext.Provider> */}
-      <HookCounter />
+      {/* <HookCounter /> */}
+      <LoginForm />
     </>
   );
   }
