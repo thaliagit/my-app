@@ -12,7 +12,7 @@ export default function HookCounter({ initialValue = 0 }) {
     return (
     <div>
         <h2>Counter: {counter}</h2>
-        <button onClick={handleCounterIncr}>Increament</button>
+        <button onClick={handleCounterIncr}>Increment</button>
         <button onClick={handleCounterReset}>Reset</button>
     </div>
   )

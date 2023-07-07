@@ -3,7 +3,7 @@ import './App.css';
 import React from 'react';
 import { LanguageContext } from './components/LanguageContext';
 import DisplayLanguage from './components/DisplayLanguage';
-import HookCounter from './components/HookCounter';
+import HookCounter from './components/ClickCounter';
 
 class App extends React.Component {
 
