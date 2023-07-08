@@ -5,6 +5,7 @@ import { LanguageContext } from "./components/LanguageContext";
 import DisplayLanguage from "./components/DisplayLanguage";
 import ClickCounter from "./components/ClickCounter";
 import LoginForm from "./components/LoginForm";
+import Counter from "./components/Counter";
 
 function App() {
   // state = {
@@ -22,9 +23,7 @@ function App() {
   //   setShowCounter(s => !s)
   // }
 
-  const handleCounterChange = (counter) => {
-    console.log("Counter number: " + counter);
-  };
+
 
   return (
     <>
@@ -35,10 +34,11 @@ function App() {
       <LanguageContext.Provider value={this.state.language}>
         <DisplayLanguage />
       </LanguageContext.Provider> */}
-      <ClickCounter onCounterChange={handleCounterChange} />
+      {/* <ClickCounter /> */}
       {/* <button onClick={handleToggleCounter}>Toggle Counter</button>
       {showCounter && <ClickCounter />} */}
       {/* <LoginForm /> */}
+      <Counter />
     </>
   );
 }
