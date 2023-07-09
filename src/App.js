@@ -6,6 +6,7 @@ import DisplayLanguage from "./components/DisplayLanguage";
 import ClickCounter from "./components/ClickCounter";
 import LoginForm from "./components/LoginForm";
 import Counter from "./components/Counter";
+import GithubUser from "./components/GithubUser";
 
 function App() {
   // state = {
@@ -38,7 +39,8 @@ function App() {
       {/* <button onClick={handleToggleCounter}>Toggle Counter</button>
       {showCounter && <ClickCounter />} */}
       {/* <LoginForm /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <GithubUser username="thaliagit" />
     </>
   );
 }
