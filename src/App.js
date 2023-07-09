@@ -7,6 +7,7 @@ import ClickCounter from "./components/ClickCounter";
 import LoginForm from "./components/LoginForm";
 import Counter from "./components/Counter";
 import GithubUser from "./components/GithubUser";
+import GithubUserList from "./components/GithubUserList";
 
 function App() {
   // state = {
@@ -40,7 +41,8 @@ function App() {
       {showCounter && <ClickCounter />} */}
       {/* <LoginForm /> */}
       {/* <Counter /> */}
-      <GithubUser username="thaliagit" />
+      {/* <GithubUser username="thaliagit" /> */}
+      <GithubUserList />
     </>
   );
 }
