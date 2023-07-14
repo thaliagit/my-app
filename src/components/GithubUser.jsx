@@ -27,10 +27,16 @@ function useGithubUser(username) {
   return { data, loading, error };
 }
 
-function GithubUser({username}) {
+function GithubUser({ username }) {
   const { data, loading, error } = useGithubUser(username);
 
-  return <>{data && <div>{data.name}</div>}</>;
+  return (
+    <>
+      {loading && <h1>Loading...</h1>}
+      {error && <h1>There is an error</h1>}
+      {data && <div>{data.name}</div>}
+    </>
+  );
 }
 
 export default GithubUser;
