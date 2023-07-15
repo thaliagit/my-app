@@ -1,21 +1,33 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-function CarDetails({initialData}) {
- 
+function CarDetails({
+  initialData = { model: "Mini Cooper", year: "2020", color: "white" },
+}) {
+  const inputRef = useRef();
+  const [inputChange, setInputChange] = useState(false);
+
+  useEffect(() => {
+    inputRef.current.elements.model.value = "";
+    inputRef.current.elements.year.value = "";
+    inputRef.current.elements.color.value = "";
+  }, [inputChange]);
+
+  useEffect(() => {
+    inputRef.current.elements.model.value = initialData.model;
+    inputRef.current.elements.year.value = initialData.year;
+    inputRef.current.elements.color.value = initialData.color;
+  }, []);
+
+  function handleInputChange() {
+    setInputChange(true);
+  }
   return (
-    <>
-      <h3>Car details</h3>
-      <form>
-        <label htmlFor="model">model: </label>
-        <input type="text"/>
-        <label htmlFor="year">year: </label>
-        <input type="text"/>
-        <label htmlFor="color">
-          color:{" "}
-        </label>
-        <input type="text"/>
-      </form>
-    </>
+    <form ref={inputRef} onChange={handleInputChange}>
+      <h1>Car details</h1>
+      <input name="model" />
+      <input name="year" />
+      <input name="color" />
+    </form>
   );
 }
 
