@@ -7,6 +7,8 @@ import ClickCounter from "./components/ClickCounter";
 import LoginForm from "./components/LoginForm";
 import Counter from "./components/Counter";
 import GithubUser from "./components/GithubUser";
+import CarDetails from "./components/CarDetails";
+import Welcome from "./components/Welcome";
 
 function App() {
   // state = {
@@ -40,7 +42,9 @@ function App() {
       {showCounter && <ClickCounter />} */}
       {/* <LoginForm /> */}
       {/* <Counter /> */}
-      <GithubUser username="thaliagit" />
+      {/* <GithubUser username="thaliagit" /> */}
+    <CarDetails  />
+    {/* <Welcome /> */}
     </>
   );
 }
