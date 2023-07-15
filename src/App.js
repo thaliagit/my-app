@@ -1,34 +1,38 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { LanguageContext } from './components/LanguageContext';
 import DisplayLanguage from './components/DisplayLanguage';
 
-class App extends React.Component {
+function App () {
 
-  state = {
-    language: "en"
-  }
+  // state = {
+  //   language: "en"
+  // }
 
-  handleLanguageChange = (event) => {
-    this.setState({
-      language: event.target.value
-    })
+  // handleLanguageChange = (event) => {
+  //   this.setState({
+  //     language: event.target.value
+  //   })
+  // }
+  const [language, setLanguage] = useState('en')
+
+  function handleChangeLanguage(event){
+    setLanguage(event.target.value)
   }
   
-  render(){
   return (
     <> 
-    <select value={this.state.language} onChange={this.handleLanguageChange}>
+    <select value={language} onChange={handleChangeLanguage}>
       <option value="en">English</option>
       <option value="gr">Greek</option>
     </select>
-      <LanguageContext.Provider value={this.state.language}>
+      <LanguageContext.Provider value={language}>
         <DisplayLanguage />
       </LanguageContext.Provider>
     </>
   );
-  }
+  
 }
 
 export default App;
