@@ -7,10 +7,15 @@ import HookCounter from "./components/HookCounter";
 import LoginForm from "./components/LoginForm";
 import FilteredList from "./components/FilteredList";
 import { Route, Routes } from "react-router";
+import GithubUser from "./components/GithubUser";
+import Welcome from "./components/Welcome";
+import ShowGithubUser from "./components/ShowGithubUser";
 
 function App() {
   return(
     <Routes>
+      <Route path="/" element={<Welcome />} />
+      <Route path="/:username" element={<ShowGithubUser />}/>
       <Route path="/counter" element={<HookCounter />} />
       
     </Routes>
