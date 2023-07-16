@@ -8,7 +8,7 @@ function Welcome() {
     }
   return (
     <div>Welcome, user!
-        <button onClick={moveToCounter}>Counter</button>
+        {/* <button onClick={moveToCounter}>Counter</button> */}
     </div>
   )
 }
