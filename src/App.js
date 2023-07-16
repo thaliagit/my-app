@@ -15,8 +15,9 @@ function App() {
   return(
     <Routes>
       <Route path="/" element={<Welcome />} />
-      <Route path="/:username" element={<ShowGithubUser />}/>
+      <Route path="/list" element={<FilteredList />}/>
       <Route path="/counter" element={<HookCounter />} />
+      <Route path="/login" element={<LoginForm />} />
       
     </Routes>
   )

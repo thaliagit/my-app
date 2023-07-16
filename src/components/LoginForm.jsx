@@ -24,8 +24,11 @@ console.log(data)
   return (
     <div>
       <form>
+        <label>username: </label>
         <input onChange={handleInpChange} value={data.username} type="text" name="username" />
+        <label>password: </label>
         <input onChange={handleInpChange} value={data.password}type="password" name="password" />
+        <label>checkbox: </label>
         <input onChange={handleInpChange} checked={data.remember}type="checkbox" name="remember" />
       </form>
     </div>

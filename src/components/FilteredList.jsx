@@ -1,6 +1,17 @@
 import React, { useMemo } from "react";
 
-function FilteredList({ user }) {
+function FilteredList() {
+
+  const user = [{
+    name: "Angelo",
+    age: 24,
+    id: 3
+  }, {
+    name: "Beth",
+    age: 17,
+    id: 23
+  }]
+
   const filtered = useMemo(
     () =>
       user.filter((e) => {
@@ -12,8 +23,8 @@ function FilteredList({ user }) {
   return (
     <>
       <ul>
-        {filtered.map((el) => (
-          <li>
+        {filtered.map((el, index) => (
+          <li key={index}>
             <p>Name: {el.name}</p>
             <p>ID: {el.id}</p>
             <p>Age: {el.age}</p>
