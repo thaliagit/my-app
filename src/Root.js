@@ -4,8 +4,8 @@ import React from "react";
 
 
 export function Root(){
-    <BrowserRouter>
+    return (<BrowserRouter>
       <App />
-    </BrowserRouter>
+    </BrowserRouter>)
 }
 
