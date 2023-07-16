@@ -1,38 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-import React from 'react';
-import { LanguageContext } from './components/LanguageContext';
-import DisplayLanguage from './components/DisplayLanguage';
-import HookCounter from './components/HookCounter';
-import LoginForm from './components/LoginForm';
+import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
+import { LanguageContext } from "./components/LanguageContext";
+import DisplayLanguage from "./components/DisplayLanguage";
+import HookCounter from "./components/HookCounter";
+import LoginForm from "./components/LoginForm";
+import FilteredList from "./components/FilteredList";
 
-class App extends React.Component {
+function App() {
+  const user = [
+    {
+      name: "John Doe",
+      id: 12,
+      age: 24,
+    },
+    {
+      name: "Ted Mosby",
+      id: 2,
+      age: 32,
+    },
+    {
+      name: "Barney Stinson",
+      id: 2,
+      age: 17,
+    },
+  ];
 
-  // state = {
-  //   language: "en"
-  // }
-
-  // handleLanguageChange = (event) => {
-  //   this.setState({
-  //     language: event.target.value
-  //   })
-  // }
-  
-  render(){
-  return (
-    <> 
-    {/* <select value={this.state.language} onChange={this.handleLanguageChange}>
-      <option value="en">English</option>
-      <option value="gr">Greek</option>
-    </select>
-      <LanguageContext.Provider value={this.state.language}>
-        <DisplayLanguage />
-      </LanguageContext.Provider> */}
-      <HookCounter/>
-      {/* <LoginForm /> */}
-    </>
-  );
-  }
+  return <FilteredList user={user} />;
 }
 
 export default App;
