@@ -28,7 +28,7 @@ class App extends React.Component {
       <LanguageContext.Provider value={this.state.language}>
         <DisplayLanguage />
       </LanguageContext.Provider> */}
-      <HookCounter />
+      <HookCounter/>
       {/* <LoginForm /> */}
     </>
   );
