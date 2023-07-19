@@ -1,12 +1,12 @@
 import React from 'react'
-import GithubUser from './GithubUser'
+import GithubUsers from './GithubUsers'
 import { useParams } from 'react-router'
 
 function ShowGithubUser() {
     const {username} = useParams()
   return (
     <>
-        <GithubUser username={username}/>
+        <GithubUsers username={null}/>
     </>
   )
 }

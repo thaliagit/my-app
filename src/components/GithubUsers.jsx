@@ -4,16 +4,14 @@ import useGithubUser from './useGithubUser'
 
 
 
-function GithubUsers() {
-    const {users, error, isLoading} = useGithubUser()
+function GithubUsers({username}) {
+    const {users, error, isLoading} = useGithubUser(username)
     console.log(users)
     return (
     <>
         {isLoading && <h3>Loading...</h3>}
         {error && <h3>An error has occurred</h3>}
-        {users && <ul>
-            {users.map(user => <li key={user.id}>{user.login}</li>)}
-            </ul>}
+        {users && <h3>{users.name}</h3>}
     </>
   )
 }

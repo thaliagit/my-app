@@ -23,12 +23,12 @@ function App() {
     </div>
 
       <Routes>
-        <Route path="/" element={<Welcome />} />
-        {/* <Route path="/users" element={<GithubUserList />}>
-          <Route index element={<p>Add a user and select it</p>}/>
+        {/* <Route path="/" element={<Welcome />} /> */}
+        <Route path="/users" element={<GithubUserList />}>
+          {/* <Route index element={<p>Add a user and select it</p>}/> */}
           <Route path=":username" element={<ShowGithubUser />}/>
-        </Route> */}
-        <Route path="users" element={<GithubUsers />} />
+        </Route>
+        {/* <Route path="users" element={<GithubUsers />} /> */}
         {/* <Route path="/counter" element={<HookCounter />} /> */}
       </Routes>
       {/* <Link to="users">Users</Link> */}

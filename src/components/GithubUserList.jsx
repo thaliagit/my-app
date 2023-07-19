@@ -17,7 +17,7 @@ function GithubUserList() {
   return (
     <><ul>
     <li>
-      <Link to="/users/thaliagit">Github User 1</Link>
+      <Link to="/users/:username">Github User 1</Link>
     </li>
   </ul>
   <Outlet />
