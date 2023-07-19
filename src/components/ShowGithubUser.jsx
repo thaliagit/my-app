@@ -6,7 +6,7 @@ function ShowGithubUser() {
     const {username} = useParams()
   return (
     <>
-        <GithubUsers username={null}/>
+        <GithubUsers username={'thaliagit'}/>
     </>
   )
 }
